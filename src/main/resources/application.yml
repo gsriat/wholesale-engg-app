@@ -3,6 +3,18 @@ spring:
     name: ANZWholesaleDemoApp
   profiles:
     active: dev
+  datasource:
+    url: jdbc:hsqldb:mem:wholesaleAppDB
+    driverClassName: org.hsqldb.jdbc.JDBCDriver
+    username: sa
+    password:
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
 
 server:
   port: 8081
