@@ -28,3 +28,4 @@ server:
 logging:
   level:
     com.anz.wholesale: INFO
+  file: logs/wholesale-app.log
