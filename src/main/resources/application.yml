@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: ANZWholesaleDemoApp
+  profiles:
+    active: dev
+
+server:
+  port: 8081
+  session:
+    timeout: 1800
+  error:
+    whitelabel:
+      enabled: false
+    include-stacktrace: always
+
+logging:
+  level:
+    com.anz.wholesale: INFO
