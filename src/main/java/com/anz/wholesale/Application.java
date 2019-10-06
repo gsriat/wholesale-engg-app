@@ -21,9 +21,9 @@ public class Application {
 		ApplicationContext context = SpringApplication.run(Application.class, args);
         Environment env = context.getEnvironment();
 
-        //Using Lombok to initialize logger so if not configured in
-        //IDE, will complain for local variable log, but will
-        //compile and run fine (mvn clean install).
+        // Please install Lombok plugin.
+		// Open the Settings panel. Search for "Plugins", then search for "Lombok" in the plugins.
+		// Find the plugin and install it. Finally, restart your IDEA. Then everything will be OK!
         log.info("\n----------------------------------------------------------\n\t" +
                         "Application '{}' is running! Access URLs:\n\t" +
                         "Local: \t\thttp://localhost:{}\n\t" +
