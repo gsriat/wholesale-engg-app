@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.anz.wholesale</groupId>
 	<artifactId>wholesale-engg-app</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>wholesale-engg-app</name>
 	<description>Wholesale Engineering App</description>
 
