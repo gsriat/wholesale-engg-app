@@ -35,14 +35,14 @@ public class AccountController {
     public List<Account> getAllAccounts(@Param(value = "customerId") Long customerId) throws ResponseStatusException {
 
         List<Account> accounts = null;
-        log.info(String.format("Request to get all accounts for customer ID: {}", customerId));
+        log.info(String.format("Request to get all accounts for customer ID: %d ", customerId));
 
         try {
             accounts = accountService.findAllAccountsByCustomerId(customerId);
-            log.info(String.format("Found {} accounts for customer ID: {}", accounts.size(), customerId));
+            log.info(String.format("Found %d accounts for customer ID: %d ", accounts.size(), customerId));
 
         } catch (Exception e) {
-            log.error(String.format("Error occurred while getting accounts for customer ID: {}", customerId), e);
+            log.error(String.format("Error occurred while getting accounts for customer ID: %d ", customerId), e);
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Error fetching accounts data");
         }
         return accounts;

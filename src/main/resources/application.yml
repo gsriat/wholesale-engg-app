@@ -11,7 +11,7 @@ spring:
 
   jpa:
     database-platform: com.anz.wholesale.db.ImprovedH2Dialect
-    show-sql: true
+    show-sql: false
     open-in-view: false
     hibernate:
       ddl-auto: create-drop

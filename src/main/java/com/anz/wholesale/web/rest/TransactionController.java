@@ -35,13 +35,13 @@ public class TransactionController {
     public List<Transaction> getAllTransactions(@RequestParam Long accountNumber) throws ResponseStatusException {
 
         List<Transaction> transactions = null;
-        log.info(String.format("Request to get all transactions for account number: {}", accountNumber));
+        log.info(String.format("Request to get all transactions for account number: %d ", accountNumber));
 
         try {
             transactions = transactionService.findAll(accountNumber);
-            log.info(String.format("Found {} transactions for account number: {}", transactions.size(), accountNumber));
+            log.info(String.format("Found %d transactions for account number: %d ", transactions.size(), accountNumber));
         } catch (Exception e) {
-            log.error(String.format("Error occurred while getting transactions for account number: {}", accountNumber), e);
+            log.error(String.format("Error occurred while getting transactions for account number: %d ", accountNumber), e);
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Error fetching transactions data");
         }
         return transactions;
