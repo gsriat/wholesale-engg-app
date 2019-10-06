@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -32,7 +33,7 @@ public class AccountController {
      * @throws ResponseStatusException
      */
     @RequestMapping(method = RequestMethod.GET, path = "/getaccounts", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Account> getAllAccounts(@Param(value = "customerId") Long customerId) throws ResponseStatusException {
+    public List<Account> getAllAccounts(@RequestParam(value = "customerId") Long customerId) throws ResponseStatusException {
 
         List<Account> accounts = null;
         log.info(String.format("Request to get all accounts for customer ID: %d ", customerId));

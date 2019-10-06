@@ -8,6 +8,10 @@ spring:
     driverClassName: org.hsqldb.jdbc.JDBCDriver
     username: sa
     password:
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
 
   jpa:
     database-platform: com.anz.wholesale.db.ImprovedH2Dialect
