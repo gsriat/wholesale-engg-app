@@ -10,7 +10,7 @@ spring:
     password:
 
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: com.anz.wholesale.db.ImprovedH2Dialect
     show-sql: true
     open-in-view: false
     hibernate:
