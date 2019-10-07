@@ -35,8 +35,8 @@ public class Application {
 		// Find the plugin and install it. Finally, restart your IDEA. Then everything will be OK!
         log.info("\n----------------------------------------------------------\n\t" +
                         "Application '{}' is running! Access URLs:\n\t" +
-                        "Local: \t\thttp://localhost:{}\n\t" +
-                        "External: \thttp://{}:{}" +
+                        "Local: \t\thttps://localhost:{}\n\t" +
+                        "External: \thttps://{}:{}" +
                         "\n----------------------------------------------------------",
                 env.getProperty("spring.application.name"),
                 env.getProperty("server.port"),
