@@ -7,8 +7,13 @@ This application is a backend application with REST endpoints to provide
 information about customer accounts and transactions.
 
 ## Supported endpoints
-http://localhost:8081/api/account/getaccounts?customerId=1000
-http://localhost:8081/api/transaction/gettransactions?accountId=5000
+
+* **https://localhost:8443/api/account/getaccounts?customerId=1000**
+* **https://localhost:8443/api/transaction/gettransactions?accountId=5000**
+
+**http://localhost:8080 will redirect to https://localhost:8443**
+
+NOTE: I have added a self signed SSL certificate, so please select Advance on browser and proceed.
 
 ## Data
 For this application to test, an in-memory database HSQLDB is used. Database schema and records are created with data.sql 
